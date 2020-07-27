@@ -1,0 +1,65 @@
+2020-07-27 16:35:31.826585 (MainThread): Done resetting log handlers.
+2020-07-27 16:35:31.826624 (MainThread): Received response from rpc task.
+2020-07-27 16:35:31.826649 (MainThread): Updating status to Paused
+2020-07-27 16:40:22.329301 (MainThread): Caught sighup
+2020-07-27 16:40:23.125597 (MainThread): Updating status to Ready
+2020-07-27 16:40:23.136516 (MainThread): Kicking off rpc task.
+2020-07-27 16:40:23.136591 (MainThread): dbt client called with ['--partial-parse', 'rpc', '--profile', 'user']
+2020-07-27 16:40:23.139648 (MainThread): Setting up log handlers...
+2020-07-27 16:40:23.154282 (MainThread): Running with dbt=0.17.1
+2020-07-27 16:40:23.356299 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.rpc.server.RPCServerTask'>, debug=False, exclude=None, host='0.0.0.0', log_cache_events=False, log_format='default', models=None, partial_parse=True, port=8580, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, vars='{}', version_check=True, warn_error=False, which='rpc', write_json=True)
+2020-07-27 16:40:23.387274 (MainThread): Tracking: tracking
+2020-07-27 16:40:23.387502 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089d0f3be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089d0f3a58>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089fef95c0>]}
+2020-07-27 16:40:23.387974 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=13
+2020-07-27 16:40:23.388696 (MainThread): Supported methods: ['cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'status', 'test']
+2020-07-27 16:40:23.389274 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2020-07-27 16:40:23.392006 (Thread-1): Parsing macros/core.sql
+2020-07-27 16:40:23.396880 (Thread-1): Parsing macros/materializations/helpers.sql
+2020-07-27 16:40:23.405943 (Thread-1): Parsing macros/materializations/common/merge.sql
+2020-07-27 16:40:23.422035 (Thread-1): Parsing macros/materializations/table/table.sql
+2020-07-27 16:40:23.432629 (Thread-1): Parsing macros/materializations/view/create_or_replace_view.sql
+2020-07-27 16:40:23.440084 (Thread-1): Parsing macros/materializations/view/view.sql
+2020-07-27 16:40:23.447231 (Thread-1): Parsing macros/materializations/snapshot/snapshot.sql
+2020-07-27 16:40:23.477026 (Thread-1): Parsing macros/materializations/snapshot/strategies.sql
+2020-07-27 16:40:23.495545 (Thread-1): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2020-07-27 16:40:23.497445 (Thread-1): Parsing macros/materializations/seed/seed.sql
+2020-07-27 16:40:23.521025 (Thread-1): Parsing macros/materializations/incremental/incremental.sql
+2020-07-27 16:40:23.531818 (Thread-1): Parsing macros/materializations/incremental/helpers.sql
+2020-07-27 16:40:23.535024 (Thread-1): Parsing macros/etc/query.sql
+2020-07-27 16:40:23.536792 (Thread-1): Parsing macros/etc/get_custom_schema.sql
+2020-07-27 16:40:23.540306 (Thread-1): Parsing macros/etc/get_custom_alias.sql
+2020-07-27 16:40:23.541619 (Thread-1): Parsing macros/etc/datetime.sql
+2020-07-27 16:40:23.550783 (Thread-1): Parsing macros/etc/get_custom_database.sql
+2020-07-27 16:40:23.552515 (Thread-1): Parsing macros/etc/is_incremental.sql
+2020-07-27 16:40:23.554270 (Thread-1): Parsing macros/adapters/common.sql
+2020-07-27 16:40:23.616644 (Thread-1): Parsing macros/schema_tests/relationships.sql
+2020-07-27 16:40:23.617976 (Thread-1): Parsing macros/schema_tests/unique.sql
+2020-07-27 16:40:23.619206 (Thread-1): Parsing macros/schema_tests/accepted_values.sql
+2020-07-27 16:40:23.621257 (Thread-1): Parsing macros/schema_tests/not_null.sql
+2020-07-27 16:40:23.622772 (Thread-1): Parsing macros/adapters.sql
+2020-07-27 16:40:23.646000 (Thread-1): Parsing macros/catalog.sql
+2020-07-27 16:40:23.648063 (Thread-1): Parsing macros/materializations/incremental.sql
+2020-07-27 16:40:23.657752 (Thread-1): Parsing macros/materializations/merge.sql
+2020-07-27 16:40:23.660066 (Thread-1): Parsing macros/materializations/table.sql
+2020-07-27 16:40:23.664090 (Thread-1): Parsing macros/materializations/view.sql
+2020-07-27 16:40:23.693896 (Thread-1): * Deprecation Warning: dbt v0.17.0 introduces a new config format for the
+dbt_project.yml file. Support for the existing version 1 format will be removed
+in a future release of dbt. The following packages are currently configured with
+config version 1:
+ - my_new_project
+
+For upgrading instructions, consult the documentation:
+  https://docs.getdbt.com/docs/guides/migration-guide/upgrading-to-0-17-0
+2020-07-27 16:40:23.857857 (Thread-2): handling status request
+2020-07-27 16:40:23.858544 (Thread-2): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c8aa198>]}
+2020-07-27 16:40:23.860437 (Thread-2): sending response (<Response 183 bytes [200 OK]>) to 10.0.5.185
+2020-07-27 16:40:23.965790 (Thread-1): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2020-07-27 16:40:25.114098 (Thread-3): handling status request
+2020-07-27 16:40:25.114760 (Thread-3): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c4c2d68>]}
+2020-07-27 16:40:25.119858 (Thread-3): sending response (<Response 9151 bytes [200 OK]>) to 10.0.38.156
+2020-07-27 16:40:58.637889 (Thread-4): handling status request
+2020-07-27 16:40:58.638367 (Thread-4): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c75e630>]}
+2020-07-27 16:40:58.643795 (Thread-4): sending response (<Response 9151 bytes [200 OK]>) to 10.0.44.27
