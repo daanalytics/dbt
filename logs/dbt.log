@@ -84,3 +84,13 @@ There are 1 unused configuration paths:
 2020-07-27 16:41:42.868585 (Thread-10): handling status request
 2020-07-27 16:41:42.870398 (Thread-10): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c48f748>]}
 2020-07-27 16:41:42.871455 (Thread-10): sending response (<Response 871 bytes [200 OK]>) to 10.0.4.143
+2020-07-27 16:41:47.905531 (Thread-11): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2020-07-27 16:41:47.906165 (Thread-12): handling status request
+2020-07-27 16:41:47.907013 (Thread-12): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c0aae10>]}
+2020-07-27 16:41:47.907899 (Thread-12): sending response (<Response 605 bytes [200 OK]>) to 10.0.22.37
+2020-07-27 16:41:58.252050 (Thread-13): handling status request
+2020-07-27 16:41:58.253739 (Thread-13): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c0daf60>]}
+2020-07-27 16:41:58.254686 (Thread-13): sending response (<Response 605 bytes [200 OK]>) to 10.0.23.0
