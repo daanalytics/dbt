@@ -145,3 +145,151 @@ There are 1 unused configuration paths:
 2020-07-27 16:49:35.101301 (Thread-28): handling status request
 2020-07-27 16:49:35.102974 (Thread-28): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c79cf98>]}
 2020-07-27 16:49:35.103977 (Thread-28): sending response (<Response 873 bytes [200 OK]>) to 10.0.8.48
+2020-07-27 16:49:36.903835 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08b01a9b00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c88b630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c3cba58>]}
+2020-07-27 16:49:36.904146 (MainThread): Flushing usage events
+2020-07-27 16:49:37.052687 (MainThread): Runtime Error
+  Syntax error near line 4
+  ------------------------------
+  1  | packages:
+  2  |   - package: fivetran/salesforce
+  3  | <<<<<<< HEAD
+  4  |     version: 0.1.0
+  5  | =======
+  6  |     version: 0.1.0
+  7  | >>>>>>> ffe9a6d9fba872156b01f711909f6e015a24b252
+  
+  Raw Error:
+  ------------------------------
+  while scanning a simple key
+    in "<unicode string>", line 3, column 1:
+      <<<<<<< HEAD
+      ^
+  could not find expected ':'
+    in "<unicode string>", line 4, column 12:
+          version: 0.1.0
+                 ^
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 62, in load_yaml_text
+    return safe_load(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 57, in safe_load
+    return yaml.load(contents, Loader=YamlLoader)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/constructor.py", line 35, in get_single_data
+    node = self.get_single_node()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 111, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/usr/local/lib/python3.6/dist-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/parser.py", line 428, in parse_block_mapping_key
+    if self.check_token(KeyToken):
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 149, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "/usr/local/lib/python3.6/dist-packages/yaml/scanner.py", line 289, in stale_possible_simple_keys
+    "could not find expected ':'", self.get_mark())
+yaml.scanner.ScannerError: while scanning a simple key
+  in "<unicode string>", line 3, column 1:
+    <<<<<<< HEAD
+    ^
+could not find expected ':'
+  in "<unicode string>", line 4, column 12:
+        version: 0.1.0
+               ^
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/app/sinter/clients/dbt.py", line 755, in call
+    command + extra_args
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 159, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/main.py", line 212, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 147, in run
+    self.run_forever()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 142, in run_forever
+    threaded=not self.task_manager.single_threaded(),
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 1012, in run_simple
+    inner()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 969, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python3.6/dist-packages/werkzeug/serving.py", line 737, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python3.6/socketserver.py", line 236, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/task/rpc/server.py", line 102, in _sighup_handler
+    self.task_manager.reload_config()
+  File "/usr/local/lib/python3.6/dist-packages/dbt/rpc/task_manager.py", line 128, in reload_config
+    config = self.config.from_args(self.args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 210, in from_args
+    project, profile = cls.collect_parts(args)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/runtime.py", line 196, in collect_parts
+    project = partial.render(project_renderer)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 213, in render
+    packages_dict = package_data_from_root(self.project_root)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 101, in package_data_from_root
+    packages_dict = _load_yaml(package_filepath)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/config/project.py", line 92, in _load_yaml
+    return load_yaml_text(contents)
+  File "/usr/local/lib/python3.6/dist-packages/dbt/clients/yaml_helper.py", line 69, in load_yaml_text
+    raise dbt.exceptions.ValidationException(error)
+dbt.exceptions.ValidationException: Runtime Error
+  Syntax error near line 4
+  ------------------------------
+  1  | packages:
+  2  |   - package: fivetran/salesforce
+  3  | <<<<<<< HEAD
+  4  |     version: 0.1.0
+  5  | =======
+  6  |     version: 0.1.0
+  7  | >>>>>>> ffe9a6d9fba872156b01f711909f6e015a24b252
+  
+  Raw Error:
+  ------------------------------
+  while scanning a simple key
+    in "<unicode string>", line 3, column 1:
+      <<<<<<< HEAD
+      ^
+  could not find expected ':'
+    in "<unicode string>", line 4, column 12:
+          version: 0.1.0
+                 ^
+2020-07-27 16:49:37.055553 (MainThread): Runtime Error
+  Syntax error near line 4
+  ------------------------------
+  1  | packages:
+  2  |   - package: fivetran/salesforce
+  3  | <<<<<<< HEAD
+  4  |     version: 0.1.0
+  5  | =======
+  6  |     version: 0.1.0
+  7  | >>>>>>> ffe9a6d9fba872156b01f711909f6e015a24b252
+  
+  Raw Error:
+  ------------------------------
+  while scanning a simple key
+    in "<unicode string>", line 3, column 1:
+      <<<<<<< HEAD
+      ^
+  could not find expected ':'
+    in "<unicode string>", line 4, column 12:
+          version: 0.1.0
+                 ^
