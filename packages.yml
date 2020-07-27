@@ -1,7 +1,3 @@
 packages:
   - package: fivetran/salesforce
-<<<<<<< HEAD
     version: 0.1.0
-=======
-    version: 0.1.0
->>>>>>> ffe9a6d9fba872156b01f711909f6e015a24b252
