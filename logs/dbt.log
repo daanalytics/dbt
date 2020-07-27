@@ -110,3 +110,38 @@ There are 1 unused configuration paths:
 2020-07-27 16:46:08.764026 (Thread-18): handling status request
 2020-07-27 16:46:08.765768 (Thread-18): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c0458d0>]}
 2020-07-27 16:46:08.766731 (Thread-18): sending response (<Response 605 bytes [200 OK]>) to 10.0.4.143
+2020-07-27 16:46:13.854258 (Thread-19): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2020-07-27 16:46:14.029003 (Thread-20): handling status request
+2020-07-27 16:46:14.029484 (Thread-20): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f08977eed30>]}
+2020-07-27 16:46:14.030381 (Thread-20): sending response (<Response 605 bytes [200 OK]>) to 10.0.7.30
+2020-07-27 16:46:27.245760 (Thread-21): handling status request
+2020-07-27 16:46:27.246235 (Thread-21): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c6fc0f0>]}
+2020-07-27 16:46:27.247167 (Thread-21): sending response (<Response 605 bytes [200 OK]>) to 10.0.3.235
+2020-07-27 16:48:21.001241 (Thread-22): handling status request
+2020-07-27 16:48:21.001732 (Thread-22): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c6fc0f0>]}
+2020-07-27 16:48:21.002832 (Thread-22): sending response (<Response 605 bytes [200 OK]>) to 10.0.23.0
+2020-07-27 16:48:38.983458 (Thread-23): handling status request
+2020-07-27 16:48:38.983924 (Thread-23): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c6fc0f0>]}
+2020-07-27 16:48:38.984803 (Thread-23): sending response (<Response 605 bytes [200 OK]>) to 10.0.22.37
+2020-07-27 16:49:16.505673 (Thread-24): Got an acceptable cached parse result
+2020-07-27 16:49:16.685045 (Thread-24): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2020-07-27 16:49:17.004722 (Thread-25): handling status request
+2020-07-27 16:49:17.005233 (Thread-25): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c049f60>]}
+2020-07-27 16:49:17.006486 (Thread-25): sending response (<Response 873 bytes [200 OK]>) to 10.0.3.235
+2020-07-27 16:49:26.275513 (Thread-26): Got an acceptable cached parse result
+2020-07-27 16:49:26.443889 (Thread-26): WARNING: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2020-07-27 16:49:26.445089 (Thread-27): handling status request
+2020-07-27 16:49:26.445588 (Thread-27): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c3ed0f0>]}
+2020-07-27 16:49:26.446669 (Thread-27): sending response (<Response 873 bytes [200 OK]>) to 10.0.5.185
+2020-07-27 16:49:35.101301 (Thread-28): handling status request
+2020-07-27 16:49:35.102974 (Thread-28): Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': 'd21d4f0e-a620-486c-827e-9cfb405bca6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f089c79cf98>]}
+2020-07-27 16:49:35.103977 (Thread-28): sending response (<Response 873 bytes [200 OK]>) to 10.0.8.48
